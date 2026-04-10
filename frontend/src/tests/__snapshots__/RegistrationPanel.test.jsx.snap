@@ -1,0 +1,197 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`RegistrationPanel DOM snapshots > renders modal with no saved info 1`] = `
+<div
+  class="modal-box p-0 overflow-hidden max-w-md"
+>
+  <div
+    class="p-5 text-white"
+    style="background: rgb(44, 62, 80);"
+  >
+    <div
+      class="flex justify-between items-start gap-2"
+    >
+      <div>
+        <h2
+          class="font-bold text-base mb-1"
+        >
+          Juice Detox
+        </h2>
+        <p
+          class="text-sm opacity-70 mb-2"
+        >
+          2025-08-10
+           → 
+          2025-08-14
+           · ID 
+          2
+        </p>
+        <span
+          class="badge badge-warning"
+        >
+          pending
+        </span>
+      </div>
+      <button
+        class="btn btn-ghost btn-sm btn-circle text-white/70 hover:text-white hover:bg-white/10"
+      >
+        ✕
+      </button>
+    </div>
+  </div>
+  <div
+    class="p-5 flex flex-col gap-4"
+  >
+    <div
+      class="bg-base-200 rounded-xl p-4"
+    >
+      <p
+        class="font-bold text-base"
+      >
+        Bob Jones
+      </p>
+      <p
+        class="text-sm text-base-content/60"
+      >
+        bob@example.com
+      </p>
+      <p
+        class="text-sm text-base-content/60"
+      >
+        Cabin B
+         · 
+        4
+         night
+        s
+      </p>
+    </div>
+    <div
+      class="flex flex-col items-center gap-3 py-4 text-base-content/50"
+    >
+      <p
+        class="text-sm"
+      >
+        No retreat info saved yet.
+      </p>
+      <button
+        class="btn btn-outline btn-sm"
+      >
+        + Add Info
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RegistrationPanel DOM snapshots > renders modal with saved info 1`] = `
+<div
+  class="modal-box p-0 overflow-hidden max-w-md"
+>
+  <div
+    class="p-5 text-white"
+    style="background: rgb(44, 62, 80);"
+  >
+    <div
+      class="flex justify-between items-start gap-2"
+    >
+      <div>
+        <h2
+          class="font-bold text-base mb-1"
+        >
+          Juice Detox
+        </h2>
+        <p
+          class="text-sm opacity-70 mb-2"
+        >
+          2025-08-10
+           → 
+          2025-08-14
+           · ID 
+          2
+        </p>
+        <span
+          class="badge badge-warning"
+        >
+          pending
+        </span>
+      </div>
+      <button
+        class="btn btn-ghost btn-sm btn-circle text-white/70 hover:text-white hover:bg-white/10"
+      >
+        ✕
+      </button>
+    </div>
+  </div>
+  <div
+    class="p-5 flex flex-col gap-4"
+  >
+    <div
+      class="bg-base-200 rounded-xl p-4"
+    >
+      <p
+        class="font-bold text-base"
+      >
+        Bob Jones
+      </p>
+      <p
+        class="text-sm text-base-content/60"
+      >
+        bob@example.com
+      </p>
+      <p
+        class="text-sm text-base-content/60"
+      >
+        Cabin B
+         · 
+        4
+         night
+        s
+      </p>
+    </div>
+    <div
+      class="flex flex-col gap-2"
+    >
+      <p
+        class="text-sm"
+      >
+        ✈ 
+        AA123 Thu 6pm
+      </p>
+      <p
+        class="text-sm"
+      >
+        🍽 
+        Vegan
+      </p>
+      <div
+        class="flex flex-wrap gap-1"
+      >
+        <span
+          class="badge badge-outline badge-sm"
+        >
+          Yoga Class
+        </span>
+        <span
+          class="badge badge-outline badge-sm"
+        >
+          Massage
+        </span>
+      </div>
+      <div
+        class="flex gap-2 mt-2"
+      >
+        <button
+          class="btn btn-ghost btn-sm flex-1"
+        >
+          Edit
+        </button>
+        <button
+          class="btn btn-error btn-outline btn-sm"
+        >
+          Clear
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

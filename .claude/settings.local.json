@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ssh lordofall@gobaan.com \"sudo cp -r ~/retreat-guru/frontend-dist /var/www/html/retreat-guru && echo frontend deployed && ls /var/www/html/retreat-guru/\")"
+    ]
+  }
+}

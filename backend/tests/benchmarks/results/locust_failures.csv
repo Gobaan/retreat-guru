@@ -1,0 +1,5 @@
+Method,Name,Error,Occurrences
+PUT,/api/registrations/[id]/ PUT,HTTPError('500 Server Error: Internal Server Error for url: /api/registrations/[id]/ PUT'),119
+PUT,/api/registrations/[id]/ PUT,HTTPError('400 Client Error: Bad Request for url: /api/registrations/[id]/ PUT'),5
+DELETE,/api/registrations/[id]/ DELETE,HTTPError('404 Client Error: Not Found for url: /api/registrations/[id]/ DELETE'),10
+GET,/api/registrations/[id]/ GET,HTTPError('404 Client Error: Not Found for url: /api/registrations/[id]/ GET'),38

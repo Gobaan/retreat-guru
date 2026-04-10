@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+backend/db.sqlite3
+backend/venv/
+backend/.env
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/test-results/
+
+# Playwright
+frontend/e2e/snapshots/

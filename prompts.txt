@@ -1,0 +1,73 @@
+--- Session 1 ---
+
+1. Create a local web app with Django backend, React frontend, SQLite
+
+2. (Clarification) registration_id is a calendar registration, guests are attached to it, same guest may have different preferences per event
+
+3. okay yes lets do the front end — calendar defaulting to Aug 2025, poll Retreat Guru API, block days with reservations, show pending only, allow managing registrations/guests
+
+4. right now the registrations arent loading at all, also make it start by showing all registrations
+
+5. notice some registrations are pending, colour those in yellow instead of blue
+
+6. think of a method to show that multi day reservations are multiday reservations and show it in the UI
+
+7. Enforce an ordering so that when the bar extends to multiple days its height doesnt change
+
+8. notice for day 5 and 6 since the first day has two reservations and the second doesnt the heights dont align
+
+9. noice how september now has 4 registrations (3 from september 1st to september 4th) where are those coming from
+
+10. (Pasted full API JSON response) id 1 showing twice and also at the beginning of september and every other month
+
+11. hovering over a registration should show the names of all the participants
+
+12. we need to do a restructure, it seems in the original json, all the registrations already had a participant associated with them. so our database just needs to store information for a given guest/reservation combo and only or one guest
+
+13. at the top you have the text ('show pending reservations only'). Instead place a toggle button next to the month title...
+
+14. use the daisy ui toggle button for the pending button
+
+15. something is wrong are you using the daisyui library located here https://daisyui.com/ do you need me to give you access somehow it should be version 5.5.19
+
+16. instead of a checkbox its a searchbox with a giant rectangle button on top of it that moves left or right
+
+17. would all the code be easier to understand and read if we use daisy ui throughout?
+
+18. yes
+
+19. this looks way uglier, can you make it look like it did before. with the multiday bars and clickable calendar days
+
+20. use <input type="checkbox" checked="checked" class="toggle toggle-success" /> for toggle, make arrows larger
+
+21. display the number of available days at the bottom of the calendar in the center
+
+22. make the reservation info a pop up box rather than to the side
+
+--- Session 2 ---
+
+23. what can be refactored to make this code more readable
+
+24. yes
+
+25. assess the readability of all the files from a junior coder point of view
+
+26. fix these issues
+
+27. across the files make sure private methods are below public methods, and generally methods above call methods below
+
+28. how would you write performance tests for the backend?
+
+29. Create a seperate tests/benchmarks directory, set them up and run them and save the results
+
+30. are the race conditions not issues that need fixing
+
+31. how would you write front end tests for load times, and UI regressions, using snapshots
+
+32. yes
+
+33. change the header to green and test if the visual test fails show me the result
+
+34. where is the diff image of the failed test, i want to see the failure directly
+
+35. Save this claude session's prompts to a file called prompts.txt
