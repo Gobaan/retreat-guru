@@ -49,7 +49,7 @@ function assignSlots(registrations) {
   return { regSlot, totalSlots: slotEnds.length }
 }
 
-export default function Calendar({ year, month, registrations, onMonthChange, onSelectRegistration }) {
+export default function Calendar({ year, month, room, availableRooms, registrations, onMonthChange, onRoomChange, onSelectRegistration }) {
   const [pendingOnly, setPendingOnly] = useState(false)
 
   const visible = pendingOnly ? registrations.filter(r => r.status === 'pending') : registrations
@@ -86,7 +86,21 @@ export default function Calendar({ year, month, registrations, onMonthChange, on
 
         <div className="flex items-center justify-between mb-4">
           <button className="btn btn-ghost btn-lg btn-circle text-2xl" onClick={prevMonth}>‹</button>
-          <h2 className="text-lg font-semibold">{monthName} {year}</h2>
+          <h2 className="text-lg font-semibold flex items-center gap-2">
+            {monthName} {year}
+            <span className="text-sm font-normal text-base-content/60 flex items-center gap-1">
+              Room&nbsp;#
+              <select
+                className="select select-bordered select-sm"
+                value={room}
+                onChange={e => onRoomChange(Number(e.target.value))}
+              >
+                {availableRooms.map(r => (
+                  <option key={r} value={r}>{r}</option>
+                ))}
+              </select>
+            </span>
+          </h2>
           <label
             className="flex items-center gap-2 text-sm text-base-content/60 cursor-pointer"
             title="When on, only pending registrations are shown"

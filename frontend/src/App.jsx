@@ -6,10 +6,12 @@ import './App.css'
 
 const DEFAULT_YEAR = 2025
 const DEFAULT_MONTH = 7  // August — JS months are 0-indexed (0 = January)
+const DEFAULT_ROOM = 5
 
 export default function App() {
   const [year, setYear] = useState(DEFAULT_YEAR)
   const [month, setMonth] = useState(DEFAULT_MONTH)
+  const [room, setRoom] = useState(DEFAULT_ROOM)
   const [registrations, setRegistrations] = useState([])
   const [selected, setSelected] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -27,6 +29,15 @@ export default function App() {
     setMonth(m)
     setSelected(null)
   }
+
+  function handleRoomChange(r) {
+    setRoom(r)
+    setSelected(null)
+  }
+
+  const availableRooms = [...new Set(registrations.map(r => r.room_id - 1))].sort((a, b) => a - b)
+
+  const roomRegistrations = registrations.filter(r => r.room_id === room + 1)
 
   return (
     <div className="min-h-screen bg-base-200 flex flex-col">
@@ -49,8 +60,11 @@ export default function App() {
           <Calendar
             year={year}
             month={month}
-            registrations={registrations}
+            room={room}
+            availableRooms={availableRooms}
+            registrations={roomRegistrations}
             onMonthChange={handleMonthChange}
+            onRoomChange={handleRoomChange}
             onSelectRegistration={setSelected}
           />
         )}

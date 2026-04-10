@@ -11,6 +11,7 @@ export const SINGLE_DAY = {
   email: 'alice@example.com',
   lodging: 'Cabin A',
   nights: 1,
+  room_id: 6,
 }
 
 export const MULTI_DAY = {
@@ -23,6 +24,7 @@ export const MULTI_DAY = {
   email: 'bob@example.com',
   lodging: 'Cabin B',
   nights: 4,
+  room_id: 6,
 }
 
 export const OVERLAPPING = {
@@ -35,6 +37,7 @@ export const OVERLAPPING = {
   email: 'carol@example.com',
   lodging: 'Cabin C',
   nights: 4,
+  room_id: 8,
 }
 
 // A set that exercises slot assignment: MULTI_DAY and OVERLAPPING share days
